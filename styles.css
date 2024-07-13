@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, hwb(179 16% 42%), hsl(288, 60%, 76%));
+    padding: 10px;
+}
+
+.to-do-app {
+    background-color: whitesmoke;
+    max-width: 550px;
+    margin: 100px auto 60px;
+    padding: 30px 30px 60px;
+    border-radius: 15px;
+}
+
+.to-do-app h2 {
+    font-family: 'Stylish';
+    font-size: 30px;
+    color: lightseagreen;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.to-do-app img {
+    width: 50px;
+    margin-left: 3px;
+}
+
+/* Container for the search box */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2px;
+    margin-bottom: 30px;
+}
+
+/* Search input field */
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 14px 20px;
+    background: lightgray;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Search button */
+.search-container button {
+    padding: 14px 40px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Search button hover effect */
+.search-container button:hover {
+    background: #0056b3;
+}
+
+ul li {
+    list-style: none;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6px 58px 25px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 27px;
+    width: 27px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    border-radius: 50%;
+    top: 6px;
+    left: 10px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555
+}
+
+ul li.checked::before {
+    text-decoration: line-through;
+    background-image: url(images/checked.png);
+    color: #555
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+}
+
+ul li span:hover {
+    background: lightgray;
+}
