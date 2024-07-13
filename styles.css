@@ -12,6 +12,40 @@
     padding: 10px;
 }
 
+.myProgress {
+    width: 100%;
+    background-color: grey;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.myBar {
+    height: 30px;
+    background-color: #04AA6D;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition: width 0.3s;
+}
+
+.myBar::after {
+    content: attr(data-progress);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: lightseagreen;
+    font-family: 'Stylish';
+    font-size: 24px;
+}
 .to-do-app {
     background-color: whitesmoke;
     max-width: 550px;
@@ -118,4 +152,47 @@ ul li span {
 
 ul li span:hover {
     background: lightgray;
+}
+
+@media only screen and (max-width: 600px) {
+    .to-do-app {
+        padding: 20px;
+    }
+
+    .to-do-app h2 {
+        font-size: 24px;
+    }
+
+    .to-do-app img {
+        width: 40px;
+    }
+
+    .search-container input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .search-container button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 18px;
+        padding: 5px 35px;
+    }
+
+    ul li::before {
+        height: 20px;
+        width: 20px;
+        top: 6px;
+        left: 8px;
+    }
+
+    ul li span {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
